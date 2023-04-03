@@ -36,7 +36,7 @@ class QuizGameViewModel:ViewModel() {
         }
         if(_usedQuiz.size == 10) {
             _state.value = 0
-            _message.value = "You have ${_score.value}/10"
+            _message.value = "You have ${_score.value}/10 score"
         }
         else {
             generateQuiz()
