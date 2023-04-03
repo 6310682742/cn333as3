@@ -24,9 +24,9 @@ fun QuizGameScreen(
 ) {
 
     Surface {
-        Column(
 
-        ) {
+        Column {
+
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -60,7 +60,9 @@ fun QuizGameScreen(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Button(onClick = { viewModels.startGame() }) {
-                        Text(text = "Start Game!", )
+
+                        Text(text = "Start Game!")
+
                     }
                 }
 

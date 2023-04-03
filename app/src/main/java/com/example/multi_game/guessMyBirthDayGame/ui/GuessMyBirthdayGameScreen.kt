@@ -33,6 +33,7 @@ fun GuessMyBirthdayGame(navController: NavController, viewModel: GuessMyBirthday
                     .height(60.dp),
                 horizontalArrangement = Arrangement.Start,
                 verticalAlignment = Alignment.CenterVertically
+
             ) {
                 Text(
                     text = "Guess My Birthday",
