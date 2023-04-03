@@ -5,6 +5,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.multi_game.numberGuessingGame.ui.NumberGuessingGameScreen
+import com.example.multi_game.quizGame.ui.QuizGameScreen
 
 @Composable
 fun Navigation() {
