@@ -16,8 +16,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.example.multi_game.numberGuessingGame.viewModel.NumberGuessingGameViewModel
 import com.example.multi_game.Screen
+import com.example.multi_game.numberGuessingGame.viewModel.NumberGuessingGameViewModel
 import com.example.multi_game.ui.theme.Purple500
 
 @Composable
@@ -32,7 +32,9 @@ fun NumberGuessingGameScreen(navController: NavController, viewModels:NumberGues
                 .background(Purple500)) {
                 Text(text = "Number Guessing Game", fontSize = 20.sp, modifier = Modifier.padding(16.dp), color = Color.White)
             }
-            Row(modifier = Modifier.fillMaxWidth().padding(6.dp), horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.CenterVertically) {
+            Row(modifier = Modifier
+                .fillMaxWidth()
+                .padding(6.dp), horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.CenterVertically) {
                 Text(text = "Try to guess the number I'm thinking of from 1-1000!", modifier = Modifier
                     .padding(26.dp)
                     .fillMaxWidth()
@@ -41,7 +43,9 @@ fun NumberGuessingGameScreen(navController: NavController, viewModels:NumberGues
 
 //            Text(text = "result: ${viewModels.result.value}")
 //            Text(text = "MyNumber: ${viewModels.myNumber.value}")
-            Row(modifier = Modifier.fillMaxWidth().padding(6.dp), horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.CenterVertically) {
+            Row(modifier = Modifier
+                .fillMaxWidth()
+                .padding(6.dp), horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.CenterVertically) {
                 Text(text = viewModels.hint.value)
             }
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.CenterVertically) {
@@ -52,7 +56,9 @@ fun NumberGuessingGameScreen(navController: NavController, viewModels:NumberGues
 
             }
 //            Text(text = "State: ${viewModels.state.value}")
-            Row(modifier = Modifier.fillMaxWidth().padding(6.dp), horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.CenterVertically) {
+            Row(modifier = Modifier
+                .fillMaxWidth()
+                .padding(6.dp), horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.CenterVertically) {
                 if(viewModels.state.value == 0) {
                     Button(onClick = { viewModels.onGameStart() }) {
                         Text(text = "StartGame")
@@ -69,7 +75,9 @@ fun NumberGuessingGameScreen(navController: NavController, viewModels:NumberGues
 
 
             }
-            Row(modifier = Modifier.fillMaxWidth().padding(6.dp), horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.CenterVertically) {
+            Row(modifier = Modifier
+                .fillMaxWidth()
+                .padding(6.dp), horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.CenterVertically) {
                 Button(onClick = {
                     navController.navigate(Screen.HomeScreen.route)
                 }) {

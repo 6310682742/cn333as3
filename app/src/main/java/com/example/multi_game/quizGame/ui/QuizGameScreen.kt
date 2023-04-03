@@ -19,8 +19,7 @@ import com.example.multi_game.ui.theme.Purple500
 
 @Composable
 fun QuizGameScreen(
-    navController: NavController,
-    viewModels: QuizGameViewModel = QuizGameViewModel()
+    navController: NavController, viewModels: QuizGameViewModel = QuizGameViewModel()
 ) {
 
     Surface {
@@ -31,11 +30,26 @@ fun QuizGameScreen(
                 modifier = Modifier
                     .fillMaxWidth()
                     .background(Purple500)
+                    .height(60.dp),
+                horizontalArrangement = Arrangement.Start,
+                verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
                     text = "Quiz Game",
                     fontSize = 20.sp,
-                    modifier = Modifier.padding(16.dp),
+                    modifier = Modifier.padding(6.dp),
+                    color = Color.White
+                )
+                Text(
+                    text = "${viewModels.no.value} of 10 questions",
+                    fontSize = 20.sp,
+                    modifier = Modifier.padding(6.dp),
+                    color = Color.White
+                )
+                Text(
+                    text = "Score: ${viewModels.score.value}",
+                    fontSize = 20.sp,
+                    modifier = Modifier.padding(6.dp),
                     color = Color.White
                 )
             }
@@ -47,7 +61,7 @@ fun QuizGameScreen(
                     horizontalArrangement = Arrangement.Center,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Text(text = viewModels.message.value, fontSize = 20.sp )
+                    Text(text = viewModels.message.value, fontSize = 20.sp)
                 }
             }
 
@@ -71,8 +85,7 @@ fun QuizGameScreen(
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(6.dp),
-                )
-                {
+                ) {
                     Text(text = viewModels.quiz.value.question, modifier = Modifier.fillMaxWidth())
 
                 }
@@ -85,7 +98,11 @@ fun QuizGameScreen(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Button(onClick = { viewModels.checkAnswer(ans) }) {
-                            Text(text = ans, modifier = Modifier.fillMaxWidth(), textAlign = TextAlign.Center)
+                            Text(
+                                text = ans,
+                                modifier = Modifier.fillMaxWidth(),
+                                textAlign = TextAlign.Center
+                            )
                         }
 
                     }
