@@ -22,7 +22,6 @@ fun QuizGameScreen(
     navController: NavController,
     viewModels: QuizGameViewModel = QuizGameViewModel()
 ) {
-
     Surface {
 
         Column {
