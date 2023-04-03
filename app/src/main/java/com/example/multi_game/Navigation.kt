@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.multi_game.guessMyBirthDayGame.ui.GuessMyBirthdayGame
 import com.example.multi_game.numberGuessingGame.ui.NumberGuessingGameScreen
 import com.example.multi_game.quizGame.ui.QuizGameScreen
 
@@ -20,8 +21,8 @@ fun Navigation() {
         composable(route = Screen.QuizGameScreen.route) {
             QuizGameScreen(navController = navController)
         }
-        composable(route = Screen.NewGameScreen.route) {
-            NewGameScreen(navController = navController)
+        composable(route = Screen.GuessMyBirthdayGame.route) {
+            GuessMyBirthdayGame(navController = navController)
         }
     }
 }

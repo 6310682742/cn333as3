@@ -31,10 +31,10 @@ fun HomeScreen(navController: NavController) {
             Text(text = "Quiz Game")
         }
         Button(onClick = {
-            navController.navigate(Screen.NewGameScreen.route)
+            navController.navigate(Screen.GuessMyBirthdayGame.route)
         },
         modifier = Modifier.fillMaxWidth()) {
-            Text(text = "New Game")
+            Text(text = "Guess My Birthday Game")
         }
     }
 }
