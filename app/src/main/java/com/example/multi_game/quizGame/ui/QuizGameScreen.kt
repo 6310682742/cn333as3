@@ -30,6 +30,7 @@ fun QuizGameScreen(
                 modifier = Modifier
                     .fillMaxWidth()
                     .background(Purple500)
+
                     .height(60.dp),
                 horizontalArrangement = Arrangement.Start,
                 verticalAlignment = Alignment.CenterVertically
@@ -38,6 +39,7 @@ fun QuizGameScreen(
                     text = "Quiz Game",
                     fontSize = 20.sp,
                     modifier = Modifier.padding(6.dp),
+
                     color = Color.White
                 )
                 Text(
