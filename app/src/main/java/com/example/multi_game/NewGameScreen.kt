@@ -8,7 +8,7 @@ import androidx.navigation.NavController
 
 @Composable
 fun NewGameScreen(navController: NavController) {
-    Column() {
+    Column {
         Text(text = "This is NewGameScreen")
         Button(onClick = {
             navController.navigate(Screen.HomeScreen.route)

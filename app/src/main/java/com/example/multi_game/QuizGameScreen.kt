@@ -8,7 +8,7 @@ import androidx.navigation.NavController
 
 @Composable
 fun QuizGameScreen(navController: NavController) {
-    Column() {
+    Column {
         Text(text = "This is QuizGameScreen")
         Button(onClick = {
             navController.navigate(Screen.HomeScreen.route)
