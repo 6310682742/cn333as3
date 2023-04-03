@@ -27,9 +27,14 @@ fun NumberGuessingGameScreen(navController: NavController, viewModels:NumberGues
     }
     Surface {
         Column {
-            Row(modifier = Modifier
-                .fillMaxWidth()
-                .background(Purple500)) {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(Purple500)
+                    .height(60.dp),
+                horizontalArrangement = Arrangement.Start,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
                 Text(text = "Number Guessing Game", fontSize = 20.sp, modifier = Modifier.padding(16.dp), color = Color.White)
             }
             Row(modifier = Modifier
